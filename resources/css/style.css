@@ -24,8 +24,15 @@ a:hover {
     transition: color 500ms, background-color 500ms;
 }
 
+h1 {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
 
-/*Header*/
+
+/*Header section*/
 
 .header {
     display: flex;
@@ -53,8 +60,13 @@ a:hover {
     width: auto;
 }
 
+
 /************************/
+
+
 /*  NEED FONT FOR LOGO  */
+
+
 /************************/
 
 .logo span strong {
@@ -76,7 +88,7 @@ nav a {
 }
 
 
-/* Intro */
+/* Intro section */
 
 .intro {
     display: flex;
@@ -84,62 +96,95 @@ nav a {
     align-items: center;
     position: relative;
     width: 100%;
-    height: auto;
+    max-height: auto;
     background-color: #d3d3d3;
     top: 64px;
-    overflow: hidden;
 }
 
-
-/*.intro-img {
-  width: 60%;
-  height: auto;
-  margin-top: 2rem;
-}*/
-
-.intro img {
+.intro-img {
     display: block;
     position: relative;
-    max-width: 50%;
-    height: auto;
+    max-width: 55%;
+    overflow: hidden;
     padding: 2rem 2.5rem 2rem 1.5rem;
-    /*margin: 0 auto;*/
+}
+
+.intro img {
+    width: 100%;
+    height: auto;
 }
 
 .intro-content {
-  width: 27%;
-  line-height: 1.1;
-}
-
-.intro-content h1 {
-    font-family: 'Palanquin Dark', sans-serif;
-    font-size: 2.7rem;
-    font-weight: 500;
-    padding-bottom: 10px;
+    width: 30%;
+    height: auto;
+    margin: auto 0;
+    line-height: 1.1;
 }
 
 .intro-content h3 {
-  font-family: 'Palanquin', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 2rem 0;
 }
 
 .intro-content .button {
-  positon: relative;
+    positon: relative;
+    display: block;
+    background-color: #424949;
+    color: #F8F8FF;
+    max-width: 300px;
+    font-size: 1.6rem;
+    font-family: 'Palanquin';
+    font-weight: 300;
+    padding: 0.5rem;
+    margin: auto 0;
+    /*vertical-align: middle;*/
+    text-align: center;
+}
+
+
+/* Info section */
+
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-height: auto;
+  margin: 67px 0;
+  /*background-color: #d3d3d3;*/
+}
+
+.info-main {
+    display: block;
+    position: relative;
+    max-width: 55%;
+    overflow: hidden;
+    /*padding: 2rem 2.5rem 2rem 1.5rem;*/
+    margin: 2rem 1.5rem;
+}
+
+.info img {
+    width: 100%;
+    height: auto;
+    /*margin: 2rem 1.5rem;*/
+}
+
+.info-main span {
   display: block;
-  background-color: #424949;
-  color: #F8F8FF;
-  max-width: 300px;
-  font-size: 1.6rem;
+  position: relative;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.info-main span p {
+  padding-top: 1.5rem;
   font-family: 'Palanquin';
   font-weight: 300;
-  padding: 0.5rem;
-  margin: 2rem auto;
-  /*vertical-align: middle;*/
-  text-align: center;
+  line-height: 1.5;
 }
-/* Info */
-
 
 /* Curriculum */
 
