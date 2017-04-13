@@ -44,7 +44,6 @@ p {
 
 
 /*Header section*/
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -146,7 +145,6 @@ nav a {
 }
 
 /* Info section */
-
 .info {
     display: flex;
     justify-content: flex-start;
@@ -239,7 +237,6 @@ nav a {
 }
 
 /* Curriculum */
-
 .curriculum {
     display: flex;
     justify-content: center;
@@ -263,7 +260,6 @@ nav a {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    /*border: 1px solid blue;*/
     width: 100%;
     height: auto;
 }
@@ -286,7 +282,6 @@ nav a {
     width: 100%;
     height: auto;
     display: block;
-    /*margin-bottom: 1rem;*/
 }
 
 .course-text {
@@ -306,7 +301,91 @@ nav a {
 .course-text p {
   line-height: 1.25;
 }
-/* Exhibit */
+/* End CURRICULUM section */
+
+/* Thesis */
+.thesis {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  max-height: auto;
+  /*margin-top: 67px;*/
+}
+
+.thesis-title {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+}
+
+.thesis-vid {
+  display: block;
+  position: relative;
+  width: 55%;
+  overflow: hidden;
+  padding: 0 1rem 1.5rem 1.5rem;
+  /*border-right: 1px solid lightgray;*/
+}
+
+.thesis-vid span {
+  display: block;
+  position: relative;
+  padding-top: 2rem;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  line-height: 1.5;
+}
+
+.thesis-cards {
+  /*display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;*/
+  position: relative;
+  width: 40%;
+  height: auto;
+}
+
+.thesis-feature {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 423px;
+  height: auto;
+  border-bottom: 1px solid lightgray;
+}
+
+.thesis-feature img {
+  display: inline-block;
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+  float: left;
+}
+
+.thesis-text {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  line-height: 1.5;
+  margin: auto 0;
+}
+
+.thesis-feature p {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 
 /* Footer */
