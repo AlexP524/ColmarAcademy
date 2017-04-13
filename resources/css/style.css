@@ -19,9 +19,8 @@ a {
 }
 
 a:hover {
-    color: #ffffff;
-    background-color: #008080;
-    transition: color 500ms, background-color 500ms;
+    color: #1E90FF;
+    transition: color 500ms;
 }
 
 h1 {
@@ -95,7 +94,6 @@ nav a {
 
 
 /* Intro section */
-
 .intro {
     display: flex;
     justify-content: flex-start;
@@ -136,12 +134,16 @@ nav a {
     font-size: 1.6rem;
     font-family: 'Palanquin';
     font-weight: 300;
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin: 2.5rem 0;
-    /*vertical-align: middle;*/
     text-align: center;
 }
 
+.intro-content .button:hover {
+  font-weight: 600;
+  color: white;
+  transition: font-weight 200ms ease-in-out, color 200ms ease-in-out;
+}
 
 /* Info section */
 
@@ -244,6 +246,7 @@ nav a {
     align-items: flex-start;
     flex-wrap: wrap;
     background-color: #d3d3d3;
+    padding-bottom: 2rem;
 }
 
 .curr-title {
@@ -272,6 +275,11 @@ nav a {
   overflow: hidden;
   margin: 1rem;
   background-color: #F8F8FF;
+}
+
+.course:hover {
+  background-color: #C7E3FF;
+  transition: background-color 500ms;
 }
 
 .course img {
