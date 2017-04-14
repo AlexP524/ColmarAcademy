@@ -232,7 +232,7 @@ nav a {
     border-bottom: 1px solid lightgray;
 }
 
-.lecture {
+.orientation:hover, .campus:hover, .lecture:hover{
   background-color: #d3d3d3;
 }
 
@@ -312,6 +312,7 @@ nav a {
   position: relative;
   width: 100%;
   max-height: auto;
+  /*padding-bottom: 1rem;*/
   /*margin-top: 67px;*/
 }
 
@@ -342,6 +343,10 @@ nav a {
   line-height: 1.5;
 }
 
+.thesis-vid span p {
+  margin-top: 1rem;
+}
+
 .thesis-cards {
   /*display: flex;
   justify-content: flex-start;
@@ -357,9 +362,15 @@ nav a {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 423px;
+  /*width: 423px;*/
+  width: 100%;
   height: auto;
-  border-bottom: 1px solid lightgray;
+  /*border-bottom: 1px solid lightgray;*/
+}
+
+.thesis-feature:hover {
+  background-color: #d3d3d3;
+  transition: background-color 250ms;
 }
 
 .thesis-feature img {
@@ -386,6 +397,16 @@ nav a {
     margin: 0 auto;
 }
 
-
-
 /* Footer */
+footer {
+  border-top: 1px solid lightgray;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.75rem;
+}
+
+.footer .links a {
+  padding: 0 0.5rem;
+}
