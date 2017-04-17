@@ -6,22 +6,44 @@
     <title>Colmar Academy</title>
     <link href="resources/css/reset.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:600,700|Palanquin:300,400,500" rel="stylesheet">
+
+    <!-- Linked Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:600,700|Palanquin:300,400,500|Sarala:400,700" rel="stylesheet">
+
+    <!-- Font Awesome link -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- Header -->
-    <div class="header">
+    <div class="header-desktop">
         <div class="logo">
-            <img src="resources/images/ic-logo.svg" /><span><strong>COLMAR</strong>ACADEMY</span>
+            <img src="resources/images/ic-logo.svg" /><span id="colmar">COLMAR</span><span id="academy">ACADEMY</span>
         </div> <!-- logo -->
         <nav>
-            <span><a href="#">On Campus</a></span>
-            <span><a href="#">Online</a></span>
-            <span><a href="#">For Companies</a></span>
-            <span><a href="#">Sign in</a></span>
+            <span class="desktop"><a href="#">On Campus</a></span>
+            <span class="desktop"><a href="#">Online</a></span>
+            <span class="desktop"><a href="#">For Companies</a></span>
+            <span class="desktop"><a href="#">Sign in</a></span>
         </nav>
-    </div> <!-- header -->
+    </div> <!-- header-desktop -->
+
+    <!-- Mobile Header -->
+    <div class="header-mobile">
+      <div class="mobile">
+        <a href="#"><img src="resources/images/ic-logo.svg" /></a>
+      </div>
+      <div class="mobile">
+          <a href="#"><img src="resources/images/ic-on-campus.svg"></a>
+      </div>
+      <div class="mobile">
+          <a href="#"><img src="resources/images/ic-online.svg"></a>
+      </div>
+      <div class="mobile">
+          <a href="#"><img src="resources/images/ic-login.svg"></a>
+      </div>
+    </div> <!-- header-mobile -->
+
 
     <!-- Intro section -->
     <div class="intro">

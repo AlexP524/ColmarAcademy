@@ -1,8 +1,3 @@
-/*@font-face {
-    font-family: "Palanquin";
-    src: url(/resources/fonts/Palanquin-Regular.ttf) format('truetype'), url(/resources/fonts/Palanquin-Medium.ttf) format('truetype'), url(/resources/fonts/Palanquin-SemiBold.ttf) format('truetype'), url(/resources/fonts/Palanquin-Light.ttf) format('truetype'), url(/resources/fonts/Palanquin-Bold.ttf) format('truetype');
-}*/
-
 html {
     /*font-size: 16px;*/
 }
@@ -19,8 +14,8 @@ a {
 }
 
 a:hover {
-    color: #1E90FF;
-    transition: color 500ms;
+    color: #1E36FF;
+    transition: color 200ms;
 }
 
 h1 {
@@ -34,7 +29,6 @@ h3 {
     font-family: 'Palanquin', sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
-    /*margin: 2rem 0;*/
 }
 
 p {
@@ -44,7 +38,7 @@ p {
 
 
 /*Header section*/
-.header {
+.header-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,24 +51,51 @@ p {
     border: 1px solid gray;
 }
 
+/* .header-mobile only displays for media rule max-width 480px */
+.header-mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F8FF;
+  height: 4rem;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  border: 1px solid gray;
+}
+
+.header-mobile .mobile {
+  display: none;
+  width: 25%;
+  text-align: center;
+}
+
+.header-mobile .mobile img {
+  padding: 5px;
+}
+
 .logo {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 1.25rem;
+    font-family: "Sarala";
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+}
+
+#colmar {
+  font-weight: 700;
+}
+
+#academy {
+  color: #747474;
 }
 
 .logo img {
     margin-left: 1.5rem;
     height: 3rem;
     width: auto;
-}
-
-
-/*  NEED FONT FOR LOGO  */
-
-.logo span strong {
-    font-weight: bold;
 }
 
 nav {
@@ -85,10 +106,38 @@ nav span {
     margin-left: 1rem;
 }
 
+nav .mobile {
+  display: none;
+}
+
 nav a {
     text-decoration: none;
     padding: 4px;
     border-radius: 2px;
+}
+
+@media only screen and (max-width: 480px){
+  .header-mobile {
+      display: flex;
+  }
+
+  #colmar {
+    display: none;
+  }
+
+  #academy {
+    display: none;
+  }
+
+  .header-mobile .mobile {
+    display: block;
+  }
+
+  .header-mobile .mobile img:hover {
+    background-color: #B9B9B9;
+    border-radius: 5px;
+    transition: background-color 250ms ease;
+  }
 }
 
 
@@ -136,12 +185,67 @@ nav a {
     padding: 0.75rem;
     margin: 2.5rem 0;
     text-align: center;
+    border-radius: 5px;
 }
 
 .intro-content .button:hover {
-  font-weight: 600;
+  background-color: #5A6060;
   color: white;
-  transition: font-weight 200ms ease-in-out, color 200ms ease-in-out;
+  letter-spacing: 1px;
+  transition: color 100ms ease,
+    background-color 100ms linear,
+    letter-spacing 100ms linear;
+}
+
+@media only screen and (max-width: 480px){
+
+  .intro {
+      /*display: block;*/
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      max-height: auto;
+      background-color: #d3d3d3;
+      top: 64px;
+  }
+
+  .intro-img {
+      display: block;
+      position: relative;
+      min-width: 100%;
+      height: auto;
+      overflow: hidden;
+      text-align: center;
+      padding: 0;
+  }
+
+  .intro img {
+      width: 100%;
+      height: auto;
+  }
+
+  .intro-content {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 1.1;
+    padding: 2rem 1rem;
+  }
+
+  .intro-content h3 {
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin: 0 auto;
+  }
+
+.intro-content .button {
+  margin: 0 auto;
+  /*margin: 2.5rem 0;*/
+}
+
 }
 
 /* Info section */
@@ -233,8 +337,51 @@ nav a {
 }
 
 .orientation:hover, .campus:hover, .lecture:hover{
-  background-color: #d3d3d3;
+  background-color: #B9B9B9;
+  transition: background-color 250ms ease;
 }
+
+@media only screen and (max-width: 480px) {
+  .info-cards {
+    flex-direction: column;
+  }
+
+  .info-cards .text {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      line-height: 1.5;
+  }
+
+  .info-main {
+      display: none;
+    }
+
+    .info-cards img {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-height: 200px;
+        overflow: hidden;
+        margin: 1rem;
+    }
+
+    .orientation, .campus, .lecture {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        /*flex-direction: column;
+        justify-content: center;
+        align-items: center;*/
+        margin: auto 0;
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+    }
+
+}
+
 
 /* Curriculum */
 .curriculum {
@@ -274,8 +421,8 @@ nav a {
 }
 
 .course:hover {
-  background-color: #C7E3FF;
-  transition: background-color 500ms;
+  background-color: #B9B9B9;
+  transition: background-color 250ms ease;
 }
 
 .course img {
@@ -348,10 +495,6 @@ nav a {
 }
 
 .thesis-cards {
-  /*display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;*/
   position: relative;
   width: 40%;
   height: auto;
@@ -362,14 +505,12 @@ nav a {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  /*width: 423px;*/
   width: 100%;
   height: auto;
-  /*border-bottom: 1px solid lightgray;*/
 }
 
 .thesis-feature:hover {
-  background-color: #d3d3d3;
+  background-color: #B9B9B9;
   transition: background-color 250ms;
 }
 
