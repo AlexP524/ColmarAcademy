@@ -268,7 +268,7 @@ nav a {
     border-right: 1px solid lightgray;
 }
 
-.info img {
+.info-main img {
     width: 100%;
     height: auto;
 }
@@ -296,12 +296,16 @@ nav a {
     height: 100%;
 }
 
-.info-cards img {
+.info-cards .desktop {
     display: inline-block;
     width: 35%;
     height: auto;
     margin: 1rem;
     float: left;
+}
+
+.info-cards .mobile {
+  display: none;
 }
 
 .info-cards p {
@@ -351,33 +355,30 @@ nav a {
       display: inline-block;
       width: 100%;
       height: auto;
-      margin: 0 auto;
+      margin: 2rem;
       line-height: 1.5;
   }
 
-  .info-main {
+  .info-main, .info-cards .desktop {
       display: none;
     }
 
-    .info-cards img {
+    .info-cards .mobile {
         display: block;
         position: relative;
-        width: 100%;
-        max-height: 200px;
+        max-width: 93%;
+        height: auto;
         overflow: hidden;
-        margin: 1rem;
+        margin: 0 auto;
     }
 
     .orientation, .campus, .lecture {
         position: relative;
         display: block;
         overflow: hidden;
-        /*flex-direction: column;
-        justify-content: center;
-        align-items: center;*/
         margin: auto 0;
         width: 100%;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 0px;
     }
 
 }
