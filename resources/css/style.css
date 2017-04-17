@@ -347,7 +347,9 @@ nav a {
 
 @media only screen and (max-width: 480px) {
   .info-cards {
+    padding: 1rem 0;
     flex-direction: column;
+    border-bottom: 1px solid lightgray;
   }
 
   .info-cards .text {
@@ -448,6 +450,38 @@ nav a {
 
 .course-text p {
   line-height: 1.25;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .curriculum {
+      background-color: #F8F8FF;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid lightgray;
+  }
+
+  .curr-cards {
+      flex-direction: column;
+  }
+
+  .course img, .course-text h5, .course-text p {
+    display: none;
+  }
+
+  .course {
+    display: block;
+    width: 93%;
+    height: auto;
+    margin: 0.25rem 1rem;
+    background-color: #d3d3d3;
+  }
+
+  .course-text {
+    /*display: inline-block;*/
+    min-height: auto;
+    /*margin: 1rem 0 1.5rem 1.5rem;*/
+  }
+
 }
 /* End CURRICULUM section */
 
