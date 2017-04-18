@@ -1,21 +1,14 @@
-html {
-    /*font-size: 16px;*/
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #F8F8FF;
+    /*background-color: #F8F8FF;*/
+    background-color: #EAEBED;
+    /* theme */
     color: #424949;
 }
 
 a {
     text-decoration: none;
-    color: #696969;
-}
-
-a:hover {
-    color: #1E36FF;
-    transition: color 200ms;
+    color: #424949;
 }
 
 h1 {
@@ -48,31 +41,39 @@ p {
     top: 0;
     position: fixed;
     z-index: 100;
-    border: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
-/* .header-mobile only displays for media rule max-width 480px */
+
+/* for mobile display */
 .header-mobile {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background-color: #F8F8FF;
-  height: 4rem;
-  width: 100%;
-  top: 0;
-  position: fixed;
-  z-index: 100;
-  border: 1px solid gray;
+    display: none;
+    /* see media rule at end of this section */
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8FF;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid gray;
 }
+
+
+/* for mobile display */
 
 .header-mobile .mobile {
-  display: none;
-  width: 25%;
-  text-align: center;
+    display: none;
+    /* see media rule at end of this section */
+    width: 25%;
+    text-align: center;
 }
 
+
+/* for mobile display */
 .header-mobile .mobile img {
-  padding: 5px;
+    padding: 5px;
 }
 
 .logo {
@@ -85,11 +86,11 @@ p {
 }
 
 #colmar {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 #academy {
-  color: #747474;
+    color: #747474;
 }
 
 .logo img {
@@ -106,8 +107,10 @@ nav span {
     margin-left: 1rem;
 }
 
+
+/* for mobile display */
 nav .mobile {
-  display: none;
+    display: none; /* see media rule at end of this section */
 }
 
 nav a {
@@ -116,28 +119,27 @@ nav a {
     border-radius: 2px;
 }
 
-@media only screen and (max-width: 480px){
-  .header-mobile {
-      display: flex;
-  }
+nav a:hover {
+    color: #01A7C2;
+    transition: color 200ms;
+}
 
-  #colmar {
-    display: none;
-  }
 
-  #academy {
-    display: none;
-  }
+/* mobile display rules */
 
-  .header-mobile .mobile {
-    display: block;
-  }
-
-  .header-mobile .mobile img:hover {
-    background-color: #B9B9B9;
-    border-radius: 5px;
-    transition: background-color 250ms ease;
-  }
+@media only screen and (max-width: 480px) {
+    .header-mobile {
+        display: flex;
+    }
+    #colmar {
+        display: none;
+    }
+    #academy {
+        display: none;
+    }
+    .header-mobile .mobile {
+        display: block;
+    }
 }
 
 
@@ -176,7 +178,7 @@ nav a {
 .intro-content .button {
     positon: relative;
     display: block;
-    background-color: #424949;
+    background-color: #006989;
     color: #F8F8FF;
     max-width: 300px;
     font-size: 1.6rem;
@@ -188,65 +190,45 @@ nav a {
     border-radius: 5px;
 }
 
-.intro-content .button:hover {
-  background-color: #5A6060;
-  color: white;
-  letter-spacing: 1px;
-  transition: color 100ms ease,
-    background-color 100ms linear,
-    letter-spacing 100ms linear;
+
+/* only show hover/transition on desktop display */
+@media only screen and (min-width: 481px) {
+    .intro-content .button:hover {
+        background-color: #01A7C2;
+        color: white;
+        letter-spacing: 1px;
+        transition: color 100ms ease, background-color 100ms linear, letter-spacing 100ms linear;
+    }
 }
 
-@media only screen and (max-width: 480px){
 
-  .intro {
-      /*display: block;*/
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      width: 100%;
-      max-height: auto;
-      background-color: #d3d3d3;
-      top: 64px;
-  }
-
-  .intro-img {
-      display: block;
-      position: relative;
-      min-width: 100%;
-      height: auto;
-      overflow: hidden;
-      text-align: center;
-      padding: 0;
-  }
-
-  .intro img {
-      width: 100%;
-      height: auto;
-  }
-
-  .intro-content {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    line-height: 1.1;
-    padding: 2rem 1rem;
-  }
-
-  .intro-content h3 {
-    padding: 1rem 1rem 1.5rem 1rem;
-    margin: 0 auto;
-  }
-
-.intro-content .button {
-  margin: 0 auto;
-  /*margin: 2.5rem 0;*/
+/* mobile display rules */
+@media only screen and (max-width: 480px) {
+    .intro {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .intro-img {
+        min-width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .intro-content {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .intro-content h3 {
+        padding: 1rem 1rem 1.5rem 1rem;
+    }
+    .intro-content .button {
+        margin: 0 auto;
+    }
 }
+/* end mobile display rules */
 
-}
 
 /* Info section */
 .info {
@@ -293,100 +275,132 @@ nav a {
     flex-wrap: wrap;
     position: relative;
     min-width: 423px;
-    height: 100%;
-}
-
-.info-cards .desktop {
-    display: inline-block;
-    width: 35%;
     height: auto;
-    margin: 1rem;
+}
+
+
+/* image styling for desktop display */
+.info-cards .img-desktop {
+    display: flex;
+    width: 35%;
+    margin: 0;
     float: left;
+    padding: 1rem;
 }
 
-.info-cards .mobile {
-  display: none;
-}
-
-.info-cards p {
-    display: block;
+/* for mobile display */
+.info-cards .img-mobile {
+    display: none;
+    /* see media rules at end of section */
     position: relative;
-    width: 100%;
+    max-width: 93%;
+    height: auto;
+    overflow: hidden;
     margin: 0 auto;
 }
 
-.info-cards .text {
+/*.info-cards p {*/
+.info-content p {
+    display: block;
     position: relative;
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    line-height: 1.5;
+    width: 100%;
+    margin: -1rem 0;
 }
 
-.info-cards .text a {
-    position: relative;
-    display: inline-block;
-    color: #6495ED;
-    padding: 0.5rem 0;
-    margin: 0.5rem 0;
+.info-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: -1.5rem;
 }
 
-.orientation, .campus, .lecture {
+#display-control {
+    position: relative;
+    display: block;
+    visibility: hidden;
+    color: #006989;
+    margin-top: -2rem;
+    font-size: 1.25rem;
+}
+
+.info-content {
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: stretch;
+    width: auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.info-content .text {
+    position: relative;
+    display: flex;
     align-items: center;
-    width: 100%;
-    border-bottom: 1px solid lightgray;
+    flex-wrap: wrap;
+    min-height: 100%;
+    margin: auto 0;
 }
 
-.orientation:hover, .campus:hover, .lecture:hover{
-  background-color: #B9B9B9;
-  transition: background-color 250ms ease;
+
+/* only show hover/transition on desktop display */
+@media only screen and (min-width: 481px) {
+
+    .info-content:hover #display-control {
+        visibility: visible;
+        transition: visibility 250ms ease;
+    }
+
+    .info-content:hover {
+        background-color: #A3BAC3;
+        transition: background-color 250ms ease;
+    }
 }
 
+
+/* mobile display rules */
 @media only screen and (max-width: 480px) {
-  .info-cards {
-    padding: 1rem 0;
-    flex-direction: column;
-    border-bottom: 1px solid lightgray;
-  }
-
-  .info-cards .text {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      height: auto;
-      margin: 2rem;
-      line-height: 1.5;
-  }
-
-  .info-main, .info-cards .desktop {
-      display: none;
+    .info-cards {
+        padding: 1rem 0;
+        flex-direction: column;
+        border-bottom: 1px solid lightgray;
     }
-
-    .info-cards .mobile {
-        display: block;
-        position: relative;
-        max-width: 93%;
+    .info-cards .text {
+        width: 100%;
         height: auto;
-        overflow: hidden;
-        margin: 0 auto;
+        margin: 1rem;
+    }
+    .info-main, .info-cards .img-desktop {
+        display: none;
+    }
+    .info-cards .img-mobile {
+        display: block;
     }
 
-    .orientation, .campus, .lecture {
-        position: relative;
+    .info-content {
         display: block;
         overflow: hidden;
         margin: auto 0;
-        width: 100%;
         border-bottom: 0px;
     }
 
+    .info-content h3 {
+      margin-top: 0;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-content p {
+      margin: 0.5rem 0;
+    }
+
+    #display-control {
+      visibility: visible;
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
 }
+/* end mobile display rules */
 
 
-/* Curriculum */
+/* Curriculum section */
 .curriculum {
     display: flex;
     justify-content: center;
@@ -415,17 +429,12 @@ nav a {
 }
 
 .course {
-  display: inline-block;
-  width: 25%;
-  height: auto;
-  overflow: hidden;
-  margin: 1rem;
-  background-color: #F8F8FF;
-}
-
-.course:hover {
-  background-color: #B9B9B9;
-  transition: background-color 250ms ease;
+    display: inline-block;
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    margin: 1rem;
+    background-color: #F8F8FF;
 }
 
 .course img {
@@ -435,67 +444,69 @@ nav a {
 }
 
 .course-text {
-  display: inline-block;
-  min-height: 150px;
-  margin: 1rem 0 1.5rem 1.5rem;
+    display: inline-block;
+    min-height: 150px;
+    margin: 1rem 0 1.5rem 1.5rem;
 }
 
 .course-text h3 {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 .course-text h5 {
-  margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 
 .course-text p {
-  line-height: 1.25;
+    line-height: 1.25;
 }
 
+
+/* only show hover/transition on desktop display */
+@media only screen and (min-width: 481px) {
+    .course:hover {
+        background-color: #A3BAC3;
+        transition: background-color 250ms ease;
+    }
+}
+
+
+/* mobile display rules */
 @media only screen and (max-width: 480px) {
-
-  .curriculum {
-      background-color: #F8F8FF;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid lightgray;
-  }
-
-  .curr-cards {
-      flex-direction: column;
-  }
-
-  .course img, .course-text h5, .course-text p {
-    display: none;
-  }
-
-  .course {
-    display: block;
-    width: 93%;
-    height: auto;
-    margin: 0.25rem 1rem;
-    background-color: #d3d3d3;
-  }
-
-  .course-text {
-    /*display: inline-block;*/
-    min-height: auto;
-    /*margin: 1rem 0 1.5rem 1.5rem;*/
-  }
-
+    .curriculum {
+        background-color: #F8F8FF;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid lightgray;
+    }
+    .curr-cards {
+        flex-direction: column;
+    }
+    .course img, .course-text h5, .course-text p {
+        display: none;
+    }
+    .course {
+        display: block;
+        width: 93%;
+        margin: 0.25rem 1rem;
+        background-color: #d3d3d3;
+    }
+    .course-text {
+        min-height: auto;
+    }
 }
 /* End CURRICULUM section */
 
-/* Thesis */
+
+/* Thesis exhibits section */
 .thesis {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  position: relative;
-  width: 100%;
-  max-height: auto;
-  /*padding-bottom: 1rem;*/
-  /*margin-top: 67px;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    max-height: auto;
+    border-bottom: 1px solid lightgray;
 }
 
 .thesis-title {
@@ -508,62 +519,60 @@ nav a {
 }
 
 .thesis-vid {
-  display: block;
-  position: relative;
-  width: 55%;
-  overflow: hidden;
-  padding: 0 1rem 1.5rem 1.5rem;
-  /*border-right: 1px solid lightgray;*/
+    display: block;
+    position: relative;
+    width: 55%;
+    overflow: hidden;
+    padding: 0 1rem 1.5rem 1.5rem;
+}
+
+.thesis-vid video {
+    border: 1px solid lightgray;
 }
 
 .thesis-vid span {
-  display: block;
-  position: relative;
-  padding-top: 2rem;
-  margin: 0 auto;
-  padding-top: 1.5rem;
-  line-height: 1.5;
+    display: block;
+    position: relative;
+    padding-top: 2rem;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    line-height: 1.5;
 }
 
 .thesis-vid span p {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .thesis-cards {
-  position: relative;
-  width: 40%;
-  height: auto;
+    position: relative;
+    width: 40%;
+    height: auto;
 }
 
 .thesis-feature {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  height: auto;
-}
-
-.thesis-feature:hover {
-  background-color: #B9B9B9;
-  transition: background-color 250ms;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
 }
 
 .thesis-feature img {
-  display: inline-block;
-  width: 35%;
-  height: auto;
-  margin: 1rem;
-  float: left;
+    display: inline-block;
+    width: 35%;
+    height: auto;
+    margin: 1rem;
+    float: left;
 }
 
 .thesis-text {
-  position: relative;
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  line-height: 1.5;
-  margin: auto 0;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    line-height: 1.5;
+    margin: auto 0;
 }
 
 .thesis-feature p {
@@ -573,16 +582,60 @@ nav a {
     margin: 0 auto;
 }
 
-/* Footer */
-footer {
-  border-top: 1px solid lightgray;
-  padding: 1rem 1.5rem 2rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-size: 0.75rem;
+
+/* only show hover/transition on desktop display */
+@media only screen and (min-width: 481px) {
+    .thesis-feature:hover {
+        background-color: #A3BAC3;
+        transition: background-color 250ms;
+    }
 }
 
-.footer .links a {
-  padding: 0 0.5rem;
+
+/* mobile display rules */
+@media only screen and (max-width: 480px) {
+    .thesis {
+        border: none;
+    }
+    .thesis-vid span {
+        display: none;
+    }
+    .thesis-cards {
+        display: none;
+    }
+    .thesis-vid {
+        width: 100%;
+        padding: 0;
+    }
+    .thesis-vid video {
+        width: 100%;
+        height: auto;
+    }
+}
+/* End Thesis exhibits */
+
+
+/* Footer section */
+footer {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 0.75rem;
+}
+
+footer .links a {
+    padding: 0 0.5rem;
+}
+
+
+/* mobile display rules */
+@media only screen and (max-width: 480px) {
+    footer {
+        margin-top: 1.5rem;
+        padding: 1rem 1rem;
+    }
+    .footer .links {
+        display: none;
+    }
 }
