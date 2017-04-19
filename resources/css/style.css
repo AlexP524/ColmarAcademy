@@ -33,7 +33,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F8F8FF;
+    background-color: #A3BAC3;
     height: 4rem;
     width: 100%;
     top: 0;
@@ -43,14 +43,13 @@ p {
 }
 
 
-/* for mobile display */
+/* mobile display */
 .header-mobile {
-    display: none;
     /* see media rule at end of this section */
+    display: none;
     justify-content: center;
     align-items: center;
-    /*background-color: #F8F8FF;*/
-    backgroun-color: #A3BAC3;
+    background-color: #A3BAC3;
     height: 4rem;
     width: 100%;
     top: 0;
@@ -60,17 +59,17 @@ p {
 }
 
 
-/* for mobile display */
-
+/* mobile display */
 .header-mobile .mobile {
     display: none;
     /* see media rule at end of this section */
     width: 25%;
     text-align: center;
+    z-index: 100;
 }
 
 
-/* for mobile display */
+/* mobile display */
 .header-mobile .mobile img {
     padding: 5px;
 }
@@ -107,7 +106,7 @@ nav span {
 }
 
 
-/* for mobile display */
+/* mobile display */
 nav .mobile {
     display: none; /* see media rule at end of this section */
 }
@@ -125,17 +124,19 @@ nav a:hover {
 
 
 /* mobile display rules */
-
 @media only screen and (max-width: 480px) {
+    .header-desktop {
+      display: none;
+    }
+
     .header-mobile {
         display: flex;
     }
-    #colmar {
+
+    #colmar, #academy {
         display: none;
     }
-    #academy {
-        display: none;
-    }
+
     .header-mobile .mobile {
         display: block;
     }
@@ -287,7 +288,7 @@ nav a:hover {
     padding: 1rem;
 }
 
-/* for mobile display */
+/* mobile display */
 .info-cards .img-mobile {
     display: none;
     /* see media rules at end of section */
@@ -298,7 +299,6 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/*.info-cards p {*/
 .info-content p {
     display: block;
     position: relative;
@@ -313,7 +313,8 @@ nav a:hover {
 
 #display-control {
     position: relative;
-    display: hidden;
+    display: block;
+    visibility: hidden;
     color: #006989;
     margin-top: -2rem;
     font-size: 1.25rem;
@@ -337,12 +338,11 @@ nav a:hover {
     margin: auto 0;
 }
 
-
 /* only show hover/transition on desktop display */
 @media only screen and (min-width: 481px) {
 
     .info-content:hover #display-control {
-        display: block;
+        visibility: visible;
         transition: 250ms ease;
     }
 
