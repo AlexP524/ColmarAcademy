@@ -1,8 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    /*background-color: #F8F8FF;*/
     background-color: #EAEBED;
-    /* theme */
     color: #424949;
 }
 
@@ -51,7 +49,8 @@ p {
     /* see media rule at end of this section */
     justify-content: center;
     align-items: center;
-    background-color: #F8F8FF;
+    /*background-color: #F8F8FF;*/
+    backgroun-color: #A3BAC3;
     height: 4rem;
     width: 100%;
     top: 0;
@@ -314,8 +313,7 @@ nav a:hover {
 
 #display-control {
     position: relative;
-    display: block;
-    visibility: hidden;
+    display: hidden;
     color: #006989;
     margin-top: -2rem;
     font-size: 1.25rem;
@@ -344,8 +342,8 @@ nav a:hover {
 @media only screen and (min-width: 481px) {
 
     .info-content:hover #display-control {
-        visibility: visible;
-        transition: visibility 250ms ease;
+        display: block;
+        transition: 250ms ease;
     }
 
     .info-content:hover {
